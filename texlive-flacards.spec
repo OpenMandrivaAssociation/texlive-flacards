@@ -1,3 +1,9 @@
+# revision 19440
+# category Package
+# catalog-ctan /macros/latex/contrib/flacards
+# catalog-date 2010-01-16 19:56:06 +0100
+# catalog-license gpl
+# catalog-version 0.1.1b
 Name:		texlive-flacards
 Version:	0.1.1b
 Release:	1
@@ -45,6 +51,7 @@ of the paper.
 %doc %{_texmfdistdir}/doc/latex/flacards/flacards_ex.tex
 %doc %{_texmfdistdir}/doc/latex/flacards/flacards_ex1.tex
 %doc %{_texmfdistdir}/doc/latex/flacards/flacards_ex2.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,3 +62,5 @@ of the paper.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
