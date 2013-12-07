@@ -6,7 +6,7 @@
 # catalog-version 0.1.1b
 Name:		texlive-flacards
 Version:	0.1.1b
-Release:	4
+Release:	5
 Summary:	Generate flashcards for printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/flacards
