@@ -1,18 +1,12 @@
-# revision 19440
-# category Package
-# catalog-ctan /macros/latex/contrib/flacards
-# catalog-date 2010-01-16 19:56:06 +0100
-# catalog-license gpl
-# catalog-version 0.1.1b
 Name:		texlive-flacards
-Version:	0.1.1b
-Release:	11
+Version:	19440
+Release:	1
 Summary:	Generate flashcards for printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/flacards
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flacards.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flacards.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flacards.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flacards.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ flashcards. It will print several cards per page, on both sides
 of the paper.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,24 +39,10 @@ of the paper.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1.1b-2
-+ Revision: 751920
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1.1b-1
-+ Revision: 718456
-- texlive-flacards
-- texlive-flacards
-- texlive-flacards
-- texlive-flacards
-
