@@ -1,6 +1,6 @@
 Name:		texlive-flacards
 Version:	19440
-Release:	1
+Release:	2
 Summary:	Generate flashcards for printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/flacards
