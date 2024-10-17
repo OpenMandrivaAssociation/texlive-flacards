@@ -3,7 +3,7 @@ Version:	19440
 Release:	2
 Summary:	Generate flashcards for printing
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/flacards
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/flacards
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flacards.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/flacards.doc.r%{version}.tar.xz
